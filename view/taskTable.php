@@ -40,7 +40,7 @@ var theForm = 'checker' + arg1;
 
 function confirmDelete(arg1, arg2)
 {
-	var message = 'Are you sure you would like to delete task #' + arg1 + ': ' + arg2;
+	var message = 'Are you sure you would like to delete task #' + arg1 + ': ' + arg2 + '?';
 	var theForm2 = 'delete' + arg1;
 	if (confirm(message))
 	{}
