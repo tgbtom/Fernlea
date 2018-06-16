@@ -61,33 +61,33 @@ function confirmDelete(arg1, arg2)
 	<?php foreach ($results as $result) : ?>
 	<tr>
 		<td><?php echo $result['id'];?></td>
-		<td>
+		<td class='checkbox'>
 			<?php $completed = $result['completed'];
 			if ($completed)
 			{
 				echo "<form action='functions/saveComplete.php' method='post' name='checker" . $result['id'] . "'>
 				<input hidden name='id' value='" . $result['id'] . "'>
-				<input type='checkbox' name='complete' id='" . $result['id'] . "' onclick=verify(`" . $result['id'] . "`) checked></form>";
+				<input type='checkbox' class='checkbox' name='complete' id='" . $result['id'] . "' onclick=verify(`" . $result['id'] . "`) checked></form>";
 				$completion = true;
 			}
 			else
 			{
 				echo "<form action='functions/saveComplete.php' method='post' name='checker" . $result['id'] . "'>
 				<input hidden name='id' value='" . $result['id'] . "'>
-				<input type='checkbox' name='complete' id='" . $result['id'] . "' onclick=verify(`" . $result['id'] . "`)></form>";
+				<input type='checkbox' class='checkbox' name='complete' id='" . $result['id'] . "' onclick=verify(`" . $result['id'] . "`)></form>";
 				$completion = false;
 			}
 			?>			
 			
 		</td>
-		<td><?php echo $result['title'];?></td>
+		<td class='title'><?php echo $result['title'];?></td>
 		<td><?php echo $result['description'];?></td>
 		<td><?php echo $result['dueDate'];?></td>
 		<td><?php echo formatPriority($result['priority']);?></td>
 		<td>
 			<form method='post' action='functions/saveNotes.php'>
 			<input hidden value='<?php echo $result['id'];?>' name='id'>
-			<textarea name='notes' rows='3' cols='100'><?php echo $result['notes'];?></textarea>
+			<textarea name='notes' rows='3' cols='70'><?php echo $result['notes'];?></textarea>
 			<input type='submit' value='save'>
 			</form>
 		</td>

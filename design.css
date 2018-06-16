@@ -1,13 +1,15 @@
 .toDoTable
 {
 	border: 1px solid black;
+	text-align: center;
 }
 
 th, td
 {
 	border: 1px solid black;
-	padding: 0px;
-	margin: 0px;
+	margin-right: 5px;
+	padding: 5px;
+	text-align: center;
 }
 body 
 {
@@ -78,4 +80,14 @@ br
 {
     width: 15em;
     margin-bottom: .2em;
+}
+.title
+{
+	text-align: center;
+}
+td input[type="checkbox"] 
+{
+    float: left;
+    margin: 0 auto;
+    width: 100%;
 }

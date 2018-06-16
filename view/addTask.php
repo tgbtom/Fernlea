@@ -26,7 +26,7 @@
 		<br>
 		
 		<label>Notes:</label>
-		<textarea name='notes' rows=3 cols =50></textarea>
+		<textarea name='notes' rows = '3' cols = '40'></textarea>
 		<br>
 		
 		<input type='submit' value='Add Task'>
