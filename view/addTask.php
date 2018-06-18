@@ -30,5 +30,8 @@
 		<br>
 		
 		<input type='submit' value='Add Task'>
-</form>
+</form><br><br>
+
+<a href='.'>Return to Task List</a>
+
 </div>
